@@ -73,9 +73,13 @@ class DevVm < Formula
 
   def install
     bin.install "dev-vm"
+    bash_completion.install "completions/dev-vm.bash" => "dev-vm"
+    zsh_completion.install "completions/dev-vm.zsh" => "_dev-vm"
+    fish_completion.install "completions/dev-vm.fish"
   end
 
   test do
     assert_match version.to_s, shell_output("#{bin}/dev-vm version")
+    assert_match "complete -F _dev_vm dev-vm", shell_output("#{bin}/dev-vm completion bash")
   end
 end
