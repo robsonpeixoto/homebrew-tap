@@ -40,7 +40,7 @@ end
 class DevVm < Formula
   desc "Isolated Lima dev VM for macOS with rootless Docker and GitHub SSH"
   homepage "https://github.com/robsonpeixoto/dev-vm"
-  version "0.7.0"
+  version "0.8.0"
 
   depends_on "gh"
   depends_on "lima"
@@ -49,12 +49,12 @@ class DevVm < Formula
     on_arm do
       url "https://github.com/robsonpeixoto/dev-vm/releases/download/v#{version}/dev-vm_#{version}_darwin_arm64.tar.gz",
           using: GitHubPrivateReleaseDownloadStrategy
-      sha256 "fd6a23d2d00d2cb4658eb0cd7eaee06c4cdcb5d2625a73f9520b43532b802761"
+      sha256 "cc1d9626f2d22e2c1856fcb1c5af97524b9a5eaf50faec140bd21f1932da2f14"
     end
     on_intel do
       url "https://github.com/robsonpeixoto/dev-vm/releases/download/v#{version}/dev-vm_#{version}_darwin_amd64.tar.gz",
           using: GitHubPrivateReleaseDownloadStrategy
-      sha256 "8a1021f7887ba74e8acfd976c7bd758df35a7c96b33d2c0c964c085bc7218dd9"
+      sha256 "6592d802f9651985351e03bb5017a322a56c70f114d5d3dabd3472ed1f4e8777"
     end
   end
 
@@ -62,12 +62,12 @@ class DevVm < Formula
     on_arm do
       url "https://github.com/robsonpeixoto/dev-vm/releases/download/v#{version}/dev-vm_#{version}_linux_arm64.tar.gz",
           using: GitHubPrivateReleaseDownloadStrategy
-      sha256 "d9da08f2b98ed1aba90eb1d4e29ac374368432d28d645ada60f8271e7dae1118"
+      sha256 "6ff4300a412f90bdbb1258672f74416fb78434dd80d75c5c862c7946a679eddd"
     end
     on_intel do
       url "https://github.com/robsonpeixoto/dev-vm/releases/download/v#{version}/dev-vm_#{version}_linux_amd64.tar.gz",
           using: GitHubPrivateReleaseDownloadStrategy
-      sha256 "8d7093a443829e85792b6f51365010f2800c7963d660303f77e85c401be27132"
+      sha256 "3ec6ce00d359f99c25a35ca0fa839e59d2d1e949a5cb48484078ef5558bbaa06"
     end
   end
 
